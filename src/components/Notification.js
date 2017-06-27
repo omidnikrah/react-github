@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class Notification extends Component {
   render() {
-    const { type, text } = this.props;
+    const { details } = this.props;
     return (
-      <CSSTransitionGroup
-        transitionName="notification"
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={300}
+      <ReactCSSTransitionGroup
+        transitionName="example"
+        transitionAppear
+        transitionLeave
+        transitionAppearTimeout={500}
       >
-        <div className={`notification notification-${type}`}>
-          <span>{text}</span>
+        <div className={`notification notification-${details.type}`}>
+          <span>{details.text}</span>
         </div>
-      </CSSTransitionGroup>
+      </ReactCSSTransitionGroup>
     );
   }
 }

@@ -530,6 +530,7 @@ path {
 			letter-spacing: -0.5;
 			word-spacing: -1px;
 			color: #444;
+			text-align: left;
 		}
 		.programming_language-label {
 			padding: 10px 15px;
@@ -545,6 +546,7 @@ path {
 			background-color: #222;
 			border-radius: 5px;
 			position: relative;
+			display: inline-block;
 			svg {
 				width: 60%;
 				height: 60%;
@@ -626,6 +628,7 @@ path {
 	border-radius: 5px;
 	color: #fff;
 	position: fixed;
+	visibility: visible;
 	bottom: 0;
 	left: 50%;
 	transform: translate3d(-50%,-20px,0px);
@@ -647,10 +650,14 @@ path {
 .example-enter {
   opacity: 0.01;
 }
+.example-appear {
+  opacity: 0.01;
+  transition: all 500ms ease-in;
+}
 
-.example-enter.example-enter-active {
+.example-enter.example-enter-active,.example-appear.example-appear-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: all 500ms ease-in;
 }
 
 .example-leave {
@@ -659,5 +666,18 @@ path {
 
 .example-leave.example-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+#contributors{
+	#contributors-header{
+		float: left;
+		font-size: 20px;
+		padding: 50px 0;
+		color: #c7c7c7;
+	}
+	#contributors-content{
+		width: 100%;
+		display: inline-block;
+	}
 }
