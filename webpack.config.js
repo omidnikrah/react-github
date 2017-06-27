@@ -63,7 +63,7 @@ const config = {
 		}]
 	},
 	devServer: {
-		port: 3040,
+		port: 2020,
 		historyApiFallback: true
 	},
     plugins: [
