@@ -118,7 +118,7 @@ export default class Search extends Component {
     const { status } = this.state.notification;
     // console.log(`${status}, ${type}`);
     if (status) {
-      return <Notification details={this.state.notification} key={Math.random()} />;
+      return <Notification details={this.state.notification} />;
     }
   }
 

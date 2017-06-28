@@ -175,49 +175,76 @@ li.git-user {
 	}
 }
 
+// .notification-appear {
+// 	opacity: 0.01;
+// 	transform: translate3d(-50%,150px,0px);
+// 	-webkit-transform: translate3d(-50%,150px,0px);	
+// 	&.notification-appear-active {
+// 		opacity: 1;
+// 		transform: translate3d(-50%,-20px,0px);
+// 		-webkit-transform: translate3d(-50%,-20px,0px);	
+// 		transition: opacity 500ms ease-out, transform 500ms ease-out;		
+// 	}
+// }
+// .notification-enter {
+// 	opacity: 0.01;
+// 	transform: translate3d(-50%,150px,0px);
+// 	-webkit-transform: translate3d(-50%,150px,0px);	
+// 	&.notification-enter-active {
+// 		opacity: 1;
+// 		transform: translate3d(-50%,-20px,0px);
+// 		-webkit-transform: translate3d(-50%,-20px,0px);	
+// 		transition: opacity 500ms ease-out, transform 500ms ease-out;		
+// 	}
+// }
+// .notification-leave {
+// 	opacity: 1;
+// 	transform: translate3d(-50%,-20px,0px);
+// 	-webkit-transform: translate3d(-50%,-20px,0px);	
+// 	&.notification-leave-active {
+// 		opacity: 0.01;
+// 		transform: translate3d(-50%,150px,0px);
+// 		-webkit-transform: translate3d(-50%,150px,0px);	
+// 		transition: opacity 300ms ease-out, transform 300ms ease-out;		
+// 	}
+// }
 .notification-enter {
 	opacity: 0.01;
-	transform: translate3d(-50%,150px,0px);
-	-webkit-transform: translate3d(-50%,150px,0px);	
-	&.notification-enter-active {
-		opacity: 1;
-		transform: translate3d(-50%,-20px,0px);
-		-webkit-transform: translate3d(-50%,-20px,0px);	
-		transition: opacity 500ms ease-out, transform 500ms ease-out;		
-	}
+}
+
+.notification-enter.notification-enter-active {
+	opacity: 1;
+	transition: opacity 500ms ease-in;
 }
 
 .notification-leave {
 	opacity: 1;
-	transform: translate3d(-50%,-20px,0px);
-	-webkit-transform: translate3d(-50%,-20px,0px);	
-	&.notification-leave-active {
-		opacity: 0.01;
-		transform: translate3d(-50%,150px,0px);
-		-webkit-transform: translate3d(-50%,150px,0px);	
-		transition: opacity 300ms ease-out, transform 300ms ease-out;		
-	}
 }
 
-
+.notification-leave.notification-leave-active {
+	opacity: 0.01;
+	transition: opacity 300ms ease-in;
+}
 
 // Slide Up/Down Transition:
 .slideUpDiv-enter {
-  opacity:0;
-}
-.slideUpDiv-enter.slideUpDiv-enter-active {
-  transition: transform 800ms ease-in , opacity 800ms ease-in;
-    opacity:1;
-}
-.slideUpDiv-leave {
-    opacity:1;
-}
-.slideUpDiv-leave.slideUpDiv-leave-active {
-  transform: translate3d(0, -300%, 0);
-  transition: transform 800ms ease-in , opacity 800ms ease-in;
-    opacity:0;
+	opacity: 0;
 }
 
+.slideUpDiv-enter.slideUpDiv-enter-active {
+	transition: transform 800ms ease-in, opacity 800ms ease-in;
+	opacity: 1;
+}
+
+.slideUpDiv-leave {
+	opacity: 1;
+}
+
+.slideUpDiv-leave.slideUpDiv-leave-active {
+	transform: translate3d(0, -300%, 0);
+	transition: transform 800ms ease-in, opacity 800ms ease-in;
+	opacity: 0;
+}
 
 // .notification-appear.notification-appear-active,
 // .notification-enter.notification-enter-active {
@@ -251,36 +278,63 @@ li.git-user {
 // 	opacity: 1;
 // 	transform: translate3d(-50%,-20px,0px);
 // 	&.notification-leave-active{
-
 // 	}
 // }
-
 @keyframes notification {
-    0%   {transform: translate3d(-50%,150px,0px);}
-    25%  {transform: translate3d(-50%,-20px,0px);}
-    100% {transform: translate3d(-50%,-20px,0px);}
+	0% {
+		transform: translate3d(-50%, 150px, 0px);
+	}
+	25% {
+		transform: translate3d(-50%, -20px, 0px);
+	}
+	100% {
+		transform: translate3d(-50%, -20px, 0px);
+	}
 }
 
 @-webkit-keyframes fadein {
-    0% {transform: translate3d(-50%,150px,0px); opacity: 0;}
-    10% {transform: translate3d(-50%,-20px,0px); opacity: 1;}
+	0% {
+		transform: translate3d(-50%, 150px, 0px);
+		opacity: 0;
+	}
+	10% {
+		transform: translate3d(-50%, -20px, 0px);
+		opacity: 1;
+	}
 }
 
 @keyframes fadein {
-    0% {transform: translate3d(-50%,150px,0px); opacity: 0;}
-    10% {transform: translate3d(-50%,-20px,0px); opacity: 1;}
+	0% {
+		transform: translate3d(-50%, 150px, 0px);
+		opacity: 0;
+	}
+	10% {
+		transform: translate3d(-50%, -20px, 0px);
+		opacity: 1;
+	}
 }
 
 @-webkit-keyframes fadeout {
-	0% {transform: translate3d(-50%,-20px,0px); opacity: 1;}
-    10% {transform: translate3d(-50%,150px,0px); opacity: 0;}
+	0% {
+		transform: translate3d(-50%, -20px, 0px);
+		opacity: 1;
+	}
+	10% {
+		transform: translate3d(-50%, 150px, 0px);
+		opacity: 0;
+	}
 }
 
 @keyframes fadeout {
-    0% {transform: translate3d(-50%,-20px,0px); opacity: 1;}
-    10% {transform: translate3d(-50%,150px,0px); opacity: 0;}
+	0% {
+		transform: translate3d(-50%, -20px, 0px);
+		opacity: 1;
+	}
+	10% {
+		transform: translate3d(-50%, 150px, 0px);
+		opacity: 0;
+	}
 }
-
 
 .loadingOn {
 	display: block !important;
@@ -350,7 +404,7 @@ li.git-user {
 				color: #666;
 				@include transition(400ms);
 			}
-			.repository-update-time{
+			.repository-update-time {
 				color: #999;
 				font-size: 11px;
 				display: block;
@@ -368,7 +422,7 @@ li.git-user {
 				p {
 					color: rgba(255, 255, 255, 0.6);
 				}
-				.repository-update-time{
+				.repository-update-time {
 					color: #b33030;
 				}
 			}
@@ -394,14 +448,14 @@ li.git-user {
 						color: #333;
 					}
 				}
-				.span_language-name{
+				.span_language-name {
 					padding: 5px 10px;
 					border-radius: 3px;
 					float: right;
 					font-size: 13px;
 					color: #fff;
 					margin: 10px 10px 0 0;
-					@include transition(400ms);					
+					@include transition(400ms);
 				}
 			}
 		}
@@ -532,6 +586,11 @@ path {
 			color: #444;
 			text-align: left;
 		}
+		.repository_link-buttons {
+			display: inline-block;
+			width: 100%;
+			margin-top: 50px;
+		}
 		.programming_language-label {
 			padding: 10px 15px;
 			float: left;
@@ -631,8 +690,8 @@ path {
 	visibility: visible;
 	bottom: 0;
 	left: 50%;
-	transform: translate3d(-50%,-20px,0px);
-	-webkit-transform: translate3d(-50%,-20px,0px);	
+	transform: translate3d(-50%, -20px, 0px);
+	-webkit-transform: translate3d(-50%, -20px, 0px);
 	@include transition(300ms);
 }
 
@@ -646,38 +705,59 @@ path {
 	box-shadow: 0 0 20px #1fda97;
 }
 
-
 .example-enter {
-  opacity: 0.01;
-}
-.example-appear {
-  opacity: 0.01;
-  transition: all 500ms ease-in;
+	opacity: 0.01;
 }
 
-.example-enter.example-enter-active,.example-appear.example-appear-active {
-  opacity: 1;
-  transition: all 500ms ease-in;
+.example-appear {
+	opacity: 0.01;
+	transition: all 500ms ease-in;
+}
+
+.example-enter.example-enter-active,
+.example-appear.example-appear-active {
+	opacity: 1;
+	transition: all 500ms ease-in;
 }
 
 .example-leave {
-  opacity: 1;
+	opacity: 1;
 }
 
 .example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: all 300ms ease-in;
+	opacity: 0.01;
+	transition: all 300ms ease-in;
 }
 
-#contributors{
-	#contributors-header{
+.repository-section {
+	.repository-section-header {
 		float: left;
 		font-size: 20px;
 		padding: 50px 0;
 		color: #c7c7c7;
+		width: 100%;
+		text-align: left;
 	}
-	#contributors-content{
+	.repository-section-content {
 		width: 100%;
 		display: inline-block;
+		.git-way-access-div {
+			margin-top: 10px;
+			.git-way-access-title {
+				float: left;
+				display: inline-block;
+				margin-bottom: 10px;
+				color: #555;
+			}
+			.git-way-access {
+				text-align: left;
+				padding: 10px 15px;
+				background-color: #333;
+				border-radius: 5px;
+				color: #fff;
+				width: 100%;
+				display: inline-block;
+			}
+		}
 	}
 }

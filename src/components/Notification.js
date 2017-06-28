@@ -6,12 +6,11 @@ export default class Notification extends Component {
     const { details } = this.props;
     return (
       <ReactCSSTransitionGroup
-        transitionName="example"
-        transitionAppear
-        transitionLeave
-        transitionAppearTimeout={500}
+        transitionName="notification"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={300}
       >
-        <div className={`notification notification-${details.type}`}>
+        <div key={details.type} className={`notification notification-${details.type}`}>
           <span>{details.text}</span>
         </div>
       </ReactCSSTransitionGroup>
