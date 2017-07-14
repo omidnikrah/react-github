@@ -3,15 +3,15 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const flexboxExtract = new ExtractTextPlugin('flex.css');
-const ExtractText = new ExtractTextPlugin('[name].css');
+const flexboxExtract = new ExtractTextPlugin('./flex.css');
+const ExtractText = new ExtractTextPlugin('./[name].css');
 
 const config = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'js/[name].[chunkhash].js',
-    publicPath: '/'
+    path: path.resolve(__dirname, 'dist'),
+    filename: './js/[name].[chunkhash].js',
+    publicPath: process.env.PUBLIC_URL
   },
   module: {
     rules: [{
