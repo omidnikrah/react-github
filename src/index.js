@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
 import User from './pages/User';
 import Repository from './pages/Repository';
@@ -11,7 +11,7 @@ import Header from './components/Header';
 
 
 ReactDOM.render(
-    <BrowserRouter>
+    <HashRouter>
 		<div>
 			<Header />
 			<Route path="/" exact component={App} />
@@ -23,7 +23,7 @@ ReactDOM.render(
 			</Switch>
 			{/*<Route path="*" component={NotFound} />*/}
 		</div>
-     </BrowserRouter>
+     </HashRouter>
 , document.getElementById('app'));
 
 
