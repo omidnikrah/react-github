@@ -122,7 +122,6 @@ export default class Search extends Component {
     }
   }
 
-
   prevPaginate() {
     if (this.state.page > 1) {
       return (
@@ -140,7 +139,9 @@ export default class Search extends Component {
   }
 
   nextPaginate() {
-    return <button className="pagination-button" onClick={() => { this.paginate('next'); }}>Next</button>;
+    if (this.state.users.length >= 5) {
+      return <button className="pagination-button" onClick={() => { this.paginate('next'); }}>Next</button>;
+    }
   }
 
   paginate(state) {
