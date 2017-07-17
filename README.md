@@ -17,4 +17,4 @@ $ npm run serve
 ## Screenshot
 
 
-![react-github](https://raw.githubusercontent.com/omidnikrah/react-github/master/screenshot.jpg)
+![react-github](https://raw.githubusercontent.com/omidnikrah/react-github/master/screenshot.png)
