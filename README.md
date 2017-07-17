@@ -17,6 +17,4 @@ $ npm run serve
 ## Screenshot
 
 
-<p align='center'>
-    <img alt='react-github' src='https://github.com/omidnikrah/react-github/raw/v2/screenshots/react-github.png' />
-</p>
+![react-github](https://raw.githubusercontent.com/omidnikrah/react-github/master/screenshot.jpg)
