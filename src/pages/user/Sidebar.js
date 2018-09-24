@@ -7,9 +7,13 @@ import StatisticsBox from './../../components/main/StatisticsBox';
 export default class Sidebar extends Component {
   userSite({ blog, name }) {
     if (blog) {
+      const containProtocol = blog.indexOf("http://") === 0 || blog.indexOf("https://") === 0;
+      if(!containProtocol) {
+        blog = 'http://' + blog;        
+      }
       return (
         <div>
-          <a href={`http://${blog}`} target="_blank" id="user-site">
+          <a href={blog} target="_blank" id="user-site">
             <img src={svgLink} alt={`${name} website`} />
           </a>
         </div>
