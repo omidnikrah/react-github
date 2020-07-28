@@ -1,5 +1,5 @@
 # react-github
-A simple react version of Github
+A simple react version of Github!
 
 ## Installation
 
